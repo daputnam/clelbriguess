@@ -1,0 +1,6753 @@
+{
+  "$schema_notes": {
+    "id": "kebab-case unique key",
+    "name": "Display name — the actual answer, rendered as blanks in the UI",
+    "aliases": "Accepted alternate full-name guesses (nicknames, stage names) so a correct guess isn't rejected on a technicality",
+    "category": "Shown as the level-1 (vaguest) clue",
+    "clues": "Ordered vague -> specific. Front-end reveals one per 2 wrong guesses (levels 2-4 shown across 6 lives); level 5 is a reserve/tiebreaker clue"
+  },
+  "celebrities": [
+    {
+      "id": "tom-hanks",
+      "name": "Tom Hanks",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor whose career took off in the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won back-to-back Best Actor Oscars (Philadelphia, Forrest Gump)"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Voices Woody in Pixar's Toy Story franchise"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played a stranded FedEx employee in Cast Away"
+        }
+      ]
+    },
+    {
+      "id": "beyonce",
+      "name": "Beyoncé",
+      "aliases": [
+        "Beyonce"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Houston, Texas, who first found fame in the late 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Holds the record for most Grammy wins of any artist"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Got her start as lead singer of Destiny's Child"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Married to rapper and businessman Jay-Z"
+        }
+      ]
+    },
+    {
+      "id": "lebron-james",
+      "name": "LeBron James",
+      "aliases": [
+        "King James"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Basketball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American basketball player from Akron, Ohio, who entered the NBA in 2003"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Became the NBA's all-time leading scorer"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Has played for the Cavaliers, Heat, and Lakers"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won NBA championships in three different franchises' jerseys"
+        }
+      ]
+    },
+    {
+      "id": "taylor-swift",
+      "name": "Taylor Swift",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer-songwriter who started in country music in the mid-2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Re-recorded her early albums as 'Taylor's Version' after a masters dispute"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Her Eras Tour became one of the highest-grossing concert tours ever"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through with the 2008 album Fearless"
+        }
+      ]
+    },
+    {
+      "id": "leonardo-dicaprio",
+      "name": "Leonardo DiCaprio",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor who broke out in the 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won his first Best Actor Oscar for The Revenant (2015)"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for outspoken environmental activism"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Starred as Jack Dawson in Titanic"
+        }
+      ]
+    },
+    {
+      "id": "serena-williams",
+      "name": "Serena Williams",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Tennis)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American tennis player who turned pro in the 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won 23 Grand Slam singles titles, the most in the Open Era"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Frequent doubles partner and sister is Venus Williams"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Founded a venture capital firm after her playing career"
+        }
+      ]
+    },
+    {
+      "id": "barack-obama",
+      "name": "Barack Obama",
+      "aliases": [],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American politician born in Honolulu, Hawaii"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "First African American President of the United States"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Previously served as a U.S. Senator from Illinois"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served two terms as the 44th President, 2009-2017"
+        }
+      ]
+    },
+    {
+      "id": "oprah-winfrey",
+      "name": "Oprah Winfrey",
+      "aliases": [
+        "Oprah"
+      ],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American media figure from Mississippi who rose to fame in the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Hosted her own daytime talk show for 25 seasons"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Founded her own television network, OWN"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Frequently recommends books through her on-air book club"
+        }
+      ]
+    },
+    {
+      "id": "dwayne-johnson",
+      "name": "Dwayne Johnson",
+      "aliases": [
+        "The Rock",
+        "Dwayne 'The Rock' Johnson"
+      ],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American-Canadian actor who started as a pro wrestler in the late 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Wrestled under a ring name built around a single-syllable nickname"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Stars in the Fast & Furious and Jumanji franchises"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "His father and grandfather were also professional wrestlers"
+        }
+      ]
+    },
+    {
+      "id": "rihanna",
+      "name": "Rihanna",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Singer from Barbados who rose to fame in the mid-2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Founded the cosmetics brand Fenty Beauty"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Performed the Super Bowl LVII halftime show"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through with the single 'Pon de Replay'"
+        }
+      ]
+    },
+    {
+      "id": "meryl-streep",
+      "name": "Meryl Streep",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actress from New Jersey whose film career began in the late 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Holds the record for the most competitive Oscar acting nominations of any performer"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won her first two Oscars for Kramer vs. Kramer and Sophie's Choice"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played tyrannical fashion editor Miranda Priestly in The Devil Wears Prada"
+        }
+      ]
+    },
+    {
+      "id": "denzel-washington",
+      "name": "Denzel Washington",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor from Mount Vernon, New York, who broke through in the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Supporting Actor Oscar playing a Civil War soldier in Glory"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a Best Actor Oscar playing a corrupt cop in Training Day"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played Malcolm X in Spike Lee's 1992 biopic"
+        }
+      ]
+    },
+    {
+      "id": "tom-cruise",
+      "name": "Tom Cruise",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor born in Syracuse, New York, who became a star in the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for performing his own dangerous stunts, including motorcycle jumps and building climbs"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Stars as agent Ethan Hunt in the Mission: Impossible franchise"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played a naval aviator nicknamed Maverick in Top Gun and its sequel"
+        }
+      ]
+    },
+    {
+      "id": "brad-pitt",
+      "name": "Brad Pitt",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor raised in Springfield, Missouri, who broke through in the early 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Supporting Actor Oscar for Once Upon a Time in Hollywood"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Also won a Best Picture Oscar as a producer on 12 Years a Slave"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played Tyler Durden in Fight Club"
+        }
+      ]
+    },
+    {
+      "id": "johnny-depp",
+      "name": "Johnny Depp",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor born in Owensboro, Kentucky, known for offbeat roles since the late 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Frequent collaborator with director Tim Burton on films like Edward Scissorhands"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Multiple-time Oscar nominee who has never won a competitive Academy Award"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played Captain Jack Sparrow in the Pirates of the Caribbean franchise"
+        }
+      ]
+    },
+    {
+      "id": "will-smith",
+      "name": "Will Smith",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor and rapper from Philadelphia who first found fame on television in the early 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Starred as the title character on The Fresh Prince of Bel-Air"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a Best Actor Oscar for playing Richard Williams in King Richard"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played agent Jay in the Men in Black film series"
+        }
+      ]
+    },
+    {
+      "id": "julia-roberts",
+      "name": "Julia Roberts",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actress from Smyrna, Georgia, who became a star in the early 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Actress Oscar playing a legal clerk in Erin Brockovich"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Has ranked among Hollywood's highest-paid actresses for much of her career"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played a Hollywood Boulevard sex worker who falls for a businessman in Pretty Woman"
+        }
+      ]
+    },
+    {
+      "id": "robert-downey-jr",
+      "name": "Robert Downey Jr.",
+      "aliases": [
+        "RDJ"
+      ],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor whose career included a highly publicized comeback in the mid-2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played genius inventor Tony Stark, kicking off the Marvel Cinematic Universe in Iron Man"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a Best Supporting Actor Oscar for playing Lewis Strauss in Oppenheimer"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Reprised his most famous role in Avengers: Endgame, delivering the line 'I am Iron Man'"
+        }
+      ]
+    },
+    {
+      "id": "morgan-freeman",
+      "name": "Morgan Freeman",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor from Memphis, Tennessee, known for his distinctive voice"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Supporting Actor Oscar playing a boxing trainer in Million Dollar Baby"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Has narrated numerous documentaries and films, including March of the Penguins"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played God in the comedy Bruce Almighty and its sequel"
+        }
+      ]
+    },
+    {
+      "id": "jennifer-lawrence",
+      "name": "Jennifer Lawrence",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actress from Louisville, Kentucky, who broke through in independent film in 2010"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Actress Oscar for Silver Linings Playbook in her early twenties"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Earned an earlier Oscar nomination for the indie drama Winter's Bone"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played archer Katniss Everdeen in The Hunger Games film series"
+        }
+      ]
+    },
+    {
+      "id": "scarlett-johansson",
+      "name": "Scarlett Johansson",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actress born in New York City who broke through as a teenager in the early 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Earned early acclaim starring opposite Bill Murray in Lost in Translation"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Voiced an artificial intelligence operating system in the film Her without appearing on screen"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played Black Widow in the Marvel Cinematic Universe"
+        }
+      ]
+    },
+    {
+      "id": "angelina-jolie",
+      "name": "Angelina Jolie",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actress, daughter of actor Jon Voight, who rose to fame in the late 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Supporting Actress Oscar playing a psychiatric patient in Girl, Interrupted"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Served as a longtime Goodwill Ambassador for the UN refugee agency"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played tomb-raiding adventurer Lara Croft on screen"
+        }
+      ]
+    },
+    {
+      "id": "harrison-ford",
+      "name": "Harrison Ford",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor born in Chicago who worked as a carpenter before his acting career took off"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played smuggler Han Solo in the original Star Wars trilogy"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Played archaeologist-adventurer Indiana Jones across five films"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played a Los Angeles detective hunting replicants in Blade Runner"
+        }
+      ]
+    },
+    {
+      "id": "samuel-l-jackson",
+      "name": "Samuel L. Jackson",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor from Washington, D.C., raised in Chattanooga, Tennessee, who broke through in the early 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played hitman Jules Winnfield in Quentin Tarantino's Pulp Fiction"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Has appeared in more $100-million-grossing films than any other actor"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played Nick Fury in numerous Marvel Cinematic Universe films"
+        }
+      ]
+    },
+    {
+      "id": "nicole-kidman",
+      "name": "Nicole Kidman",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Australian actress born in Honolulu, Hawaii, who became a star in the early 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Actress Oscar playing Virginia Woolf in The Hours"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Was formerly married to fellow actor Tom Cruise"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played a courtesan opposite Ewan McGregor in the musical Moulin Rouge!"
+        }
+      ]
+    },
+    {
+      "id": "cate-blanchett",
+      "name": "Cate Blanchett",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Australian actress from Melbourne who gained international recognition in the late 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Supporting Actress Oscar playing Katharine Hepburn in The Aviator"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a Best Actress Oscar for the drama Blue Jasmine"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played the elven queen Galadriel in The Lord of the Rings trilogy"
+        }
+      ]
+    },
+    {
+      "id": "george-clooney",
+      "name": "George Clooney",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor from Lexington, Kentucky, who first found fame on television in the 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played Dr. Doug Ross on the medical drama ER before becoming a film star"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a Best Supporting Actor Oscar for the political thriller Syriana"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Led a crew of con artists as Danny Ocean in the Ocean's Eleven films"
+        }
+      ]
+    },
+    {
+      "id": "matt-damon",
+      "name": "Matt Damon",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor from Cambridge, Massachusetts, who broke through in the late 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Original Screenplay Oscar for co-writing Good Will Hunting"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Plays amnesiac CIA operative Jason Bourne in the Bourne film series"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played an astronaut stranded on Mars in The Martian"
+        }
+      ]
+    },
+    {
+      "id": "emma-watson",
+      "name": "Emma Watson",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British actress born in Paris, France, who was cast in a major film franchise as a child"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played Hermione Granger across all eight Harry Potter films"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Became a UN Women Goodwill Ambassador and launched the HeForShe gender-equality campaign"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played Belle in Disney's live-action Beauty and the Beast"
+        }
+      ]
+    },
+    {
+      "id": "natalie-portman",
+      "name": "Natalie Portman",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Israeli-American actress born in Jerusalem, raised in the United States, acting since childhood"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Holds a Harvard degree in psychology, earned while her acting career was already underway"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Played Padmé Amidala in the Star Wars prequel trilogy"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won a Best Actress Oscar playing a ballerina unraveling under pressure in Black Swan"
+        }
+      ]
+    },
+    {
+      "id": "robert-de-niro",
+      "name": "Robert De Niro",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor who rose to prominence in gritty New York-set films of the 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Frequent collaborator with director Martin Scorsese since the 1970s"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a Best Supporting Actor Oscar playing a young version of a Godfather character originated by Marlon Brando"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played an unhinged New York cabbie in Taxi Driver and a boxer in Raging Bull"
+        }
+      ]
+    },
+    {
+      "id": "al-pacino",
+      "name": "Al Pacino",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor who broke through in early 1970s crime dramas"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Actor Oscar decades into his career playing a blind, embittered retired officer"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Played a Cuban drug kingpin in a 1983 crime film remake"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played Michael Corleone across the Godfather trilogy"
+        }
+      ]
+    },
+    {
+      "id": "jack-nicholson",
+      "name": "Jack Nicholson",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor whose career took off in the counterculture films of the late 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Holds the record for the most Academy Award acting nominations by a man"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Played a grinning, sinister villain in a 1989 Batman film"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won Best Actor Oscars for One Flew Over the Cuckoo's Nest and As Good as It Gets"
+        }
+      ]
+    },
+    {
+      "id": "anthony-hopkins",
+      "name": "Anthony Hopkins",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Welsh actor knighted for his contributions to drama"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Became the oldest actor ever to win a Best Actor Oscar, at age 83"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won an earlier Oscar for a role with only about 16 minutes of screen time"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played cannibalistic psychiatrist Hannibal Lecter in The Silence of the Lambs"
+        }
+      ]
+    },
+    {
+      "id": "keanu-reeves",
+      "name": "Keanu Reeves",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Canadian actor born in Beirut, Lebanon, who became a Hollywood leading man in the 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played a time-traveling slacker in a late-1980s comedy duo film"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Stars as a legendary retired hitman in a long-running action franchise"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played Neo, a hacker who discovers reality is a simulation, in The Matrix"
+        }
+      ]
+    },
+    {
+      "id": "sandra-bullock",
+      "name": "Sandra Bullock",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actress who broke out in action and comedy films of the 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played a passenger who takes the wheel of a bomb-rigged bus in Speed"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a Best Actress Oscar playing a woman who takes in a homeless teenager"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played an astronaut stranded in orbit in Gravity"
+        }
+      ]
+    },
+    {
+      "id": "charlize-theron",
+      "name": "Charlize Theron",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "South African-American actress who moved to the US as a teenager to pursue a modeling and dance career"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Actress Oscar playing a real-life serial killer in Monster"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Trained extensively in ballet before an injury redirected her toward acting"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played a one-armed rebel warrior named Furiosa in Mad Max: Fury Road"
+        }
+      ]
+    },
+    {
+      "id": "hugh-jackman",
+      "name": "Hugh Jackman",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Australian actor and singer trained in musical theatre"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Tony Award for playing entertainer Peter Allen in The Boy from Oz"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Held a Guinness World Record for the longest career playing the same live-action Marvel superhero"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played the clawed mutant Wolverine across 17 years of X-Men films"
+        }
+      ]
+    },
+    {
+      "id": "ryan-reynolds",
+      "name": "Ryan Reynolds",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Canadian actor who started in teen sitcoms before moving into film comedy"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Co-owns a Welsh football club alongside a fellow actor"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Founded a gin brand and a mobile phone company, both later sold for large sums"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Plays a wisecracking, fourth-wall-breaking antihero in Deadpool"
+        }
+      ]
+    },
+    {
+      "id": "chris-hemsworth",
+      "name": "Chris Hemsworth",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Australian actor who started on a long-running Australian soap opera"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played the doomed father of a future starship captain in a 2009 sci-fi reboot"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Trained extensively in swordplay and gained significant muscle mass for a Marvel role"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Plays the Norse god of thunder in the Marvel Cinematic Universe"
+        }
+      ]
+    },
+    {
+      "id": "chris-evans",
+      "name": "Chris Evans",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor who first drew attention playing a Marvel hero in the mid-2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played the fiery Human Torch in an earlier Fantastic Four film series"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for playing a shield-wielding World War II super-soldier"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Plays Steve Rogers, aka Captain America, in the Marvel Cinematic Universe"
+        }
+      ]
+    },
+    {
+      "id": "zendaya",
+      "name": "Zendaya",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actress and singer who began her career as a Disney Channel star in the late 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Became the youngest two-time winner of the lead actress in a drama series Emmy"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Plays Chani in Denis Villeneuve's Dune film series"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Stars as a troubled teenager named Rue in the HBO series Euphoria"
+        }
+      ]
+    },
+    {
+      "id": "timothee-chalamet",
+      "name": "Timothée Chalamet",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American-French actor who broke through in an acclaimed 2017 coming-of-age film"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Became one of the youngest Best Actor Oscar nominees in decades for that breakout role"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Played singer Bob Dylan in a 2024 biographical film"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Plays Paul Atreides in Denis Villeneuve's Dune film series"
+        }
+      ]
+    },
+    {
+      "id": "margot-robbie",
+      "name": "Margot Robbie",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Australian actress who first gained wide attention on a TV soap before moving to Hollywood"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Earned an Oscar nomination playing disgraced figure skater Tonya Harding"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Played the Joker's accomplice Harley Quinn across several DC films"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played the title role in a 2023 blockbuster based on a Mattel doll"
+        }
+      ]
+    },
+    {
+      "id": "viola-davis",
+      "name": "Viola Davis",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actress raised in poverty in Rhode Island"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Supporting Actress Oscar in an adaptation of an August Wilson play"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Achieved EGOT status with a 2023 Grammy win for narrating her own memoir"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played formidable defense attorney Annalise Keating on How to Get Away with Murder"
+        }
+      ]
+    },
+    {
+      "id": "michael-b-jordan",
+      "name": "Michael B. Jordan",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actor who first drew wide notice in an acclaimed 2013 drama about a fatal police shooting"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played antagonist Erik Killmonger in a 2018 Marvel blockbuster"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Stars as Adonis Creed in the Rocky spinoff franchise"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Made his feature directorial debut with Creed III in 2023"
+        }
+      ]
+    },
+    {
+      "id": "emma-stone",
+      "name": "Emma Stone",
+      "aliases": [],
+      "category": "Actor",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Actor"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American actress who moved to Los Angeles as a teenager to pursue acting"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Best Actress Oscar playing an aspiring actress in a modern movie musical"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a second Best Actress Oscar playing a reanimated woman in a surreal Yorgos Lanthimos film"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played Gwen Stacy opposite Andrew Garfield in The Amazing Spider-Man films"
+        }
+      ]
+    },
+    {
+      "id": "michael-jackson",
+      "name": "Michael Jackson",
+      "aliases": [
+        "MJ",
+        "King of Pop"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer and dancer from Gary, Indiana, who first found fame as part of a family group in the late 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Nicknamed the King of Pop"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "His 1982 album Thriller is regarded as the best-selling album of all time"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Introduced the moonwalk dance move during a televised 1983 performance"
+        }
+      ]
+    },
+    {
+      "id": "elvis-presley",
+      "name": "Elvis Presley",
+      "aliases": [
+        "The King"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Tupelo, Mississippi, who rose to fame in the mid-1950s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Nicknamed the King of Rock and Roll"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for hits like 'Hound Dog' and 'Jailhouse Rock'"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Died at his Graceland mansion in Memphis in 1977"
+        }
+      ]
+    },
+    {
+      "id": "madonna",
+      "name": "Madonna",
+      "aliases": [
+        "Queen of Pop"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Michigan who broke through in the New York club scene in the early 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Nicknamed the Queen of Pop for constantly reinventing her image"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for pushing boundaries with provocative imagery throughout her career"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through with the 1984 hit 'Like a Virgin'"
+        }
+      ]
+    },
+    {
+      "id": "whitney-houston",
+      "name": "Whitney Houston",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Newark, New Jersey, who rose to fame in the mid-1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for her powerful vocal range and a record-setting run of number-one singles"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Starred opposite Kevin Costner in the 1992 film The Bodyguard"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Her rendition of 'I Will Always Love You' became the best-selling single by a female artist"
+        }
+      ]
+    },
+    {
+      "id": "prince",
+      "name": "Prince",
+      "aliases": [
+        "The Artist Formerly Known as Prince"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer and multi-instrumentalist from Minneapolis who broke through in the late 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Briefly changed his name to an unpronounceable symbol in the 1990s"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won an Academy Award for the music of his film Purple Rain"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Known for the 1984 hit 'When Doves Cry'"
+        }
+      ]
+    },
+    {
+      "id": "elton-john",
+      "name": "Elton John",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British singer-songwriter and pianist who broke through in the early 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for his flamboyant stage costumes and oversized glasses"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Knighted in 1998 for services to music"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Wrote the music for The Lion King, including 'Can You Feel the Love Tonight'"
+        }
+      ]
+    },
+    {
+      "id": "mariah-carey",
+      "name": "Mariah Carey",
+      "aliases": [
+        "Queen of Christmas"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Long Island, New York, who broke through in the early 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Famous for a five-octave vocal range and use of the whistle register"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Her holiday song sets streaming and airplay records every December"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Duetted with Boyz II Men on the 1995 number-one hit 'One Sweet Day'"
+        }
+      ]
+    },
+    {
+      "id": "adele",
+      "name": "Adele",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British singer-songwriter from London who broke through in the late 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for naming her albums after her age when she wrote them"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "One of her albums became the best-selling album of the century worldwide"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Swept the top categories at the 2012 Grammys behind the song 'Rolling in the Deep'"
+        }
+      ]
+    },
+    {
+      "id": "ed-sheeran",
+      "name": "Ed Sheeran",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British singer-songwriter from Suffolk who built a following through busking and mixtapes"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for performing solo on stage with just a guitar and a loop pedal"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "His song 'Shape of You' became one of the most-streamed songs in Spotify history"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through with the 2011 single 'The A Team'"
+        }
+      ]
+    },
+    {
+      "id": "bruno-mars",
+      "name": "Bruno Mars",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Honolulu, Hawaii, who wrote and produced hits for other artists before his solo career"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for retro showmanship blending funk, soul, and pop"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "His 2014 collaboration 'Uptown Funk' spent 14 weeks at number one"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through as a solo artist with the 2010 single 'Just the Way You Are'"
+        }
+      ]
+    },
+    {
+      "id": "justin-bieber",
+      "name": "Justin Bieber",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Canadian singer from Stratford, Ontario, discovered on YouTube as a young teenager in the late 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Signed to a record deal after a talent manager found his cover videos online"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Mentored early in his career by R&B singer Usher"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through with the 2010 single 'Baby'"
+        }
+      ]
+    },
+    {
+      "id": "justin-timberlake",
+      "name": "Justin Timberlake",
+      "aliases": [
+        "JT"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Memphis, Tennessee, who first found fame as a child performer in the 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Got his start as a member of a chart-topping boy band"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for hosting and performing sketches on Saturday Night Live"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through as a solo artist with the 2002 single 'Cry Me a River'"
+        }
+      ]
+    },
+    {
+      "id": "britney-spears",
+      "name": "Britney Spears",
+      "aliases": [
+        "Princess of Pop"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Kentwood, Louisiana, who got her start as a child performer on a Disney variety show"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Helped define teen pop when she broke through in the late 1990s"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Spent over a decade under a court conservatorship controlled by her father before it ended in 2021"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through with the 1998 single '...Baby One More Time'"
+        }
+      ]
+    },
+    {
+      "id": "lady-gaga",
+      "name": "Lady Gaga",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from New York City who broke through in the late 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for elaborate costumes and a theatrical stage persona"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Wore a dress made of raw meat to the 2010 MTV Video Music Awards"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through with the 2008 single 'Just Dance'"
+        }
+      ]
+    },
+    {
+      "id": "katy-perry",
+      "name": "Katy Perry",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Santa Barbara, California, who started out recording gospel music before switching to pop"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for colorful, high-concept music videos and stage outfits"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "An album of hers matched a chart record for most number-one singles from a single album"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through with the 2008 single 'I Kissed a Girl'"
+        }
+      ]
+    },
+    {
+      "id": "ariana-grande",
+      "name": "Ariana Grande",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Boca Raton, Florida, who started out as a teen actor on a children's TV network"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for a wide vocal range and high whistle notes"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Played Glinda in the 2024 film adaptation of a hit Broadway musical"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through with the 2018 single 'thank u, next'"
+        }
+      ]
+    },
+    {
+      "id": "billie-eilish",
+      "name": "Billie Eilish",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer from Los Angeles who broke through as a teenager in the late 2010s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Writes and records most of her music with her older brother"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for a whispery vocal style and oversized fashion sense"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Became the youngest person to win two Academy Awards"
+        }
+      ]
+    },
+    {
+      "id": "drake",
+      "name": "Drake",
+      "aliases": [
+        "Drizzy"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Canadian rapper and singer from Toronto who broke through in the late 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Got his start as a teen actor on the TV series Degrassi"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Holds the record for the most songs to chart on the Billboard Hot 100"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through with the 2009 single 'Best I Ever Had'"
+        }
+      ]
+    },
+    {
+      "id": "kanye-west",
+      "name": "Kanye West",
+      "aliases": [
+        "Ye"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American rapper and producer from Chicago who broke through in the mid-2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Legally changed his name in 2021"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Founded a namesake fashion and sneaker brand"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Broke through as a solo artist with the 2004 single 'Through the Wire'"
+        }
+      ]
+    },
+    {
+      "id": "jay-z",
+      "name": "Jay-Z",
+      "aliases": [
+        "Jay Z",
+        "Hova"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American rapper and entrepreneur from Brooklyn, New York, who rose to fame in the mid-1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Founded Roc-A-Fella Records and released his debut album in 1996"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Became hip-hop's first billionaire according to Forbes"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Married to Beyoncé since 2008"
+        }
+      ]
+    },
+    {
+      "id": "eminem",
+      "name": "Eminem",
+      "aliases": [
+        "Slim Shady",
+        "Marshall Mathers"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American rapper from Detroit who broke through in the late 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won an Academy Award for Best Original Song for a track from the film 8 Mile"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Released the blockbuster album The Marshall Mathers LP in 2000"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Raps under an alter ego named Slim Shady"
+        }
+      ]
+    },
+    {
+      "id": "kendrick-lamar",
+      "name": "Kendrick Lamar",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American rapper from Compton, California, who emerged in the early 2010s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Signed to Dr. Dre's Aftermath Entertainment early in his career"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Broke through with the album good kid, m.A.A.d city in 2012"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won the 2018 Pulitzer Prize for Music for his album DAMN."
+        }
+      ]
+    },
+    {
+      "id": "snoop-dogg",
+      "name": "Snoop Dogg",
+      "aliases": [
+        "Snoop Doggy Dogg",
+        "Calvin Broadus",
+        "Snoop Lion"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American rapper from Long Beach, California, who emerged in the early 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "First rose to prominence through collaborations with Dr. Dre on The Chronic"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Released his debut album Doggystyle in 1993, produced by Dr. Dre"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Briefly performed under a reggae persona named after a lion for a 2013 album"
+        }
+      ]
+    },
+    {
+      "id": "the-weeknd",
+      "name": "The Weeknd",
+      "aliases": [
+        "Abel Tesfaye"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Canadian singer from Toronto who emerged in the early 2010s with a run of moody mixtapes"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for a falsetto voice and dark, atmospheric R&B sound"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Headlined the Super Bowl halftime show in 2021"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Scored a global smash with the 2019 single 'Blinding Lights'"
+        }
+      ]
+    },
+    {
+      "id": "bob-dylan",
+      "name": "Bob Dylan",
+      "aliases": [
+        "Robert Zimmerman"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer-songwriter who became a leading voice of the 1960s folk revival"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won the Nobel Prize in Literature in 2016"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Wrote generation-defining protest songs like 'Blowin' in the Wind'"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Scored a signature hit with the 1965 single 'Like a Rolling Stone'"
+        }
+      ]
+    },
+    {
+      "id": "paul-mccartney",
+      "name": "Paul McCartney",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British musician from Liverpool who rose to fame in the early 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played bass and shared songwriting duties with John Lennon in the Beatles"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Formed the band Wings after the Beatles broke up in 1970"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Knighted for services to music in 1997"
+        }
+      ]
+    },
+    {
+      "id": "john-lennon",
+      "name": "John Lennon",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British musician from Liverpool who rose to fame in the early 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Co-founded a legendary British rock band with Paul McCartney"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Released the anthem 'Imagine' as a solo artist in 1971"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Was shot and killed outside his New York apartment building in 1980"
+        }
+      ]
+    },
+    {
+      "id": "mick-jagger",
+      "name": "Mick Jagger",
+      "aliases": [
+        "Sir Mick Jagger"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British musician born in Kent, England, who rose to fame in the early 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Co-founded the Rolling Stones in London in 1962"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known as one of rock's most famous frontmen for his energetic stage presence"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Knighted for services to music in 2003"
+        }
+      ]
+    },
+    {
+      "id": "freddie-mercury",
+      "name": "Freddie Mercury",
+      "aliases": [
+        "Farrokh Bulsara"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British singer born in Zanzibar who rose to fame in the 1970s as a rock frontman"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for a powerful, wide-ranging voice and flamboyant stage persona"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Wrote the six-minute rock opera single 'Bohemian Rhapsody'"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Died in 1991, a day after publicly revealing he had AIDS"
+        }
+      ]
+    },
+    {
+      "id": "david-bowie",
+      "name": "David Bowie",
+      "aliases": [
+        "Ziggy Stardust",
+        "David Robert Jones"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British musician from London who rose to fame in the early 1970s as a genre-shifting glam rock icon"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Created the flamboyant alter ego Ziggy Stardust"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Broke through with the 1969 single 'Space Oddity'"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Died in 2016, two days after releasing his final album Blackstar"
+        }
+      ]
+    },
+    {
+      "id": "bob-marley",
+      "name": "Bob Marley",
+      "aliases": [
+        "Robert Nesta Marley"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Jamaican singer-songwriter who helped bring reggae music to a global audience in the 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Rose to fame as leader of a band called the Wailers"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for anthems like 'No Woman, No Cry' and 'One Love'"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Died of cancer in 1981 at age 36"
+        }
+      ]
+    },
+    {
+      "id": "stevie-wonder",
+      "name": "Stevie Wonder",
+      "aliases": [
+        "Little Stevie Wonder"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer, songwriter and multi-instrumentalist who signed with Motown as a child in the early 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Has been blind since shortly after birth"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for hits like 'Superstition' and 'Isn't She Lovely'"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won the Grammy for Album of the Year three separate times in the 1970s"
+        }
+      ]
+    },
+    {
+      "id": "celine-dion",
+      "name": "Céline Dion",
+      "aliases": [
+        "Celine Dion"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Canadian singer from Quebec who rose to international fame in the 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won the Eurovision Song Contest in 1988 representing Switzerland"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Headlined a long-running residency show in Las Vegas"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Recorded the theme song for the 1997 film Titanic"
+        }
+      ]
+    },
+    {
+      "id": "shakira",
+      "name": "Shakira",
+      "aliases": [
+        "Shakira Isabel Mebarak Ripoll"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Colombian singer-songwriter who crossed over to English-language pop in the early 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for blending Latin, Arabic and rock influences in her music"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Co-headlined the Super Bowl halftime show in 2020 with Jennifer Lopez"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Sang 'Waka Waka (This Time for Africa),' the official song of the 2010 FIFA World Cup"
+        }
+      ]
+    },
+    {
+      "id": "selena-gomez",
+      "name": "Selena Gomez",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer and actress who got her start on a Disney Channel series in the late 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Starred as the lead in Wizards of Waverly Place before pursuing a full-time music career"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Released the Spanish-language EP Revelación in 2021, earning her first Grammy nomination"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Founded the cosmetics brand Rare Beauty in 2020"
+        }
+      ]
+    },
+    {
+      "id": "miley-cyrus",
+      "name": "Miley Cyrus",
+      "aliases": [
+        "Destiny Hope Cyrus"
+      ],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer and actress who became a teen idol in the mid-2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Starred as the title character in a Disney Channel show about a secret pop star"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Had her first number-one single with 'Wrecking Ball' in 2013"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won the Grammy for Record of the Year for her 2023 single 'Flowers'"
+        }
+      ]
+    },
+    {
+      "id": "dolly-parton",
+      "name": "Dolly Parton",
+      "aliases": [],
+      "category": "Musician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Musician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American singer-songwriter from rural Tennessee who broke through in country music in the 1960s and 70s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Wrote the country classic 'Jolene'"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Opened her own Tennessee theme park, Dollywood, in 1986"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Wrote 'I Will Always Love You,' later a massive hit for Whitney Houston"
+        }
+      ]
+    },
+    {
+      "id": "michael-jordan",
+      "name": "Michael Jordan",
+      "aliases": [
+        "MJ",
+        "Air Jordan"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Basketball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American basketball player from Wilmington, North Carolina, who entered the NBA in 1984"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won six NBA championships, all with the same franchise"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Played college basketball for the University of North Carolina before turning pro"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Hit the title-winning shot for the Chicago Bulls in the 1998 NBA Finals"
+        }
+      ]
+    },
+    {
+      "id": "muhammad-ali",
+      "name": "Muhammad Ali",
+      "aliases": [
+        "The Greatest",
+        "Cassius Clay"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Boxing)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American boxer from Louisville, Kentucky, who won Olympic gold in 1960"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Became the first fighter to win the heavyweight championship three times"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Was stripped of his title for years after refusing induction into the US military"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won the famous 'Rumble in the Jungle' fight against George Foreman in 1974"
+        }
+      ]
+    },
+    {
+      "id": "cristiano-ronaldo",
+      "name": "Cristiano Ronaldo",
+      "aliases": [
+        "CR7"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Soccer)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Portuguese forward from Madeira who began his career at Sporting CP"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won five Ballon d'Or awards during his career"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Starred for Manchester United and Real Madrid before later playing in Saudi Arabia"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Became men's international football's all-time leading goalscorer"
+        }
+      ]
+    },
+    {
+      "id": "lionel-messi",
+      "name": "Lionel Messi",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Soccer)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Argentine forward from Rosario who joined a Spanish club's youth academy as a teenager"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a record eight Ballon d'Or awards"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Spent most of his career at Barcelona before moving to Paris and then the United States"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Captained Argentina to victory at the 2022 World Cup"
+        }
+      ]
+    },
+    {
+      "id": "usain-bolt",
+      "name": "Usain Bolt",
+      "aliases": [
+        "Lightning Bolt"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Track and Field)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Jamaican sprinter who became a global star at the 2008 Olympics"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Holds the world records in the 100m and 200m sprints"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won gold in both the 100m and 200m at three consecutive Olympics"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Famous for a signature victory pose struck after his races, arm pointed to the sky"
+        }
+      ]
+    },
+    {
+      "id": "michael-phelps",
+      "name": "Michael Phelps",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Swimming)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American swimmer from Baltimore, Maryland, who made his Olympic debut in 2000 at age 15"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a record 23 Olympic gold medals over his career"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won eight gold medals at a single Olympics in 2008, a record"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Is the most decorated Olympian in history with 28 total medals"
+        }
+      ]
+    },
+    {
+      "id": "tiger-woods",
+      "name": "Tiger Woods",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Golf)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American golfer from Cypress, California, who turned professional in 1996"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won 15 major championships over his career"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Became the youngest golfer ever to win the Masters in 1997"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Completed a comeback win at the Masters in 2019 after years of injuries"
+        }
+      ]
+    },
+    {
+      "id": "roger-federer",
+      "name": "Roger Federer",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Tennis)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Swiss tennis player who turned pro in the late 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won 20 Grand Slam singles titles"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a record eight Wimbledon singles titles"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Lost an epic five-set Wimbledon final in 2008 widely called one of the greatest matches ever"
+        }
+      ]
+    },
+    {
+      "id": "rafael-nadal",
+      "name": "Rafael Nadal",
+      "aliases": [
+        "King of Clay"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Tennis)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Spanish tennis player from Mallorca who turned pro in the early 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won 22 Grand Slam singles titles over his career"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a record 14 French Open singles titles"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Went undefeated in French Open finals across his entire career"
+        }
+      ]
+    },
+    {
+      "id": "novak-djokovic",
+      "name": "Novak Djokovic",
+      "aliases": [
+        "Nole"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Tennis)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Serbian tennis player from Belgrade who turned pro in the early 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a men's record 24 Grand Slam singles titles"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Spent more weeks ranked world number one than any other player"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Part of a decade-long rivalry with Swiss and Spanish rivals often called tennis's 'Big Three'"
+        }
+      ]
+    },
+    {
+      "id": "tom-brady",
+      "name": "Tom Brady",
+      "aliases": [
+        "TB12"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Football)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American quarterback from San Mateo, California, drafted in the sixth round in 2000"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won seven Super Bowl championships, more than any other player"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Spent two decades with one franchise before winning a title with a second team"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Was picked 199th overall, one of the most famous late-round picks in NFL history"
+        }
+      ]
+    },
+    {
+      "id": "kobe-bryant",
+      "name": "Kobe Bryant",
+      "aliases": [
+        "Black Mamba"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Basketball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American basketball player who entered the NBA directly out of high school in 1996"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won five NBA championships, all with the same franchise"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Scored 81 points in a single game in 2006, one of the highest single-game totals in NBA history"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Died in a helicopter crash in 2020 along with his daughter"
+        }
+      ]
+    },
+    {
+      "id": "shaquille-oneal",
+      "name": "Shaquille O'Neal",
+      "aliases": [
+        "Shaq"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Basketball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American basketball player and dominant center who entered the NBA in 1992"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won four NBA championships across two different franchises"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Formed a championship duo with a fellow future Hall of Famer in Los Angeles in the early 2000s"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Was such a poor free-throw shooter that a foul strategy was named after him"
+        }
+      ]
+    },
+    {
+      "id": "babe-ruth",
+      "name": "Babe Ruth",
+      "aliases": [
+        "The Bambino",
+        "The Sultan of Swat"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Baseball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American baseball player from Baltimore who began his career as a pitcher in the 1910s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Held the career home run record for nearly four decades"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Helped a New York franchise win its first World Series titles in the 1920s"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Was sold by the Boston Red Sox to the New York Yankees in a deal later blamed for a decades-long championship drought"
+        }
+      ]
+    },
+    {
+      "id": "simone-biles",
+      "name": "Simone Biles",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Gymnastics)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American gymnast from Columbus, Ohio, who won her first world title in 2013"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Is the most decorated gymnast in World Championships history"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Has multiple skills named after her across different events"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Withdrew from several events at the 2020 Tokyo Olympics to prioritize her mental health"
+        }
+      ]
+    },
+    {
+      "id": "venus-williams",
+      "name": "Venus Williams",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Tennis)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American tennis player who turned pro in the mid-1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won seven Grand Slam singles titles, five of them at Wimbledon"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Frequent doubles partner and younger sister is a fellow Grand Slam champion"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Successfully campaigned for equal prize money for women at Wimbledon"
+        }
+      ]
+    },
+    {
+      "id": "david-beckham",
+      "name": "David Beckham",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Soccer)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "English midfielder who came through Manchester United's youth academy"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for his precise free kicks and pinpoint crossing"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Captained the England national team through the 2000s"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Married a member of the Spice Girls and later helped found an MLS franchise in Miami"
+        }
+      ]
+    },
+    {
+      "id": "pele",
+      "name": "Pelé",
+      "aliases": [
+        "The King"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Soccer)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Brazilian soccer player whose professional career began in the mid-1950s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won three FIFA World Cups as a player, the only person to do so"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Spent the majority of his club career with Brazilian side Santos"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Guinness World Records credits him with 1,279 career goals, the most of any player in football history"
+        }
+      ]
+    },
+    {
+      "id": "diego-maradona",
+      "name": "Diego Maradona",
+      "aliases": [
+        "El Diego"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Soccer)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Argentine soccer player who rose to global stardom in the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Captained Argentina to victory at the 1986 World Cup"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Scored both the \"Hand of God\" goal and the \"Goal of the Century\" in the same World Cup match"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Led Napoli to its first-ever Serie A titles in Italian club soccer"
+        }
+      ]
+    },
+    {
+      "id": "wayne-gretzky",
+      "name": "Wayne Gretzky",
+      "aliases": [
+        "The Great One"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Hockey)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Canadian hockey player who entered the NHL in 1979"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Holds the NHL career records for most goals, assists, and total points"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won four Stanley Cups with the Edmonton Oilers in the 1980s"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "His 1988 trade to the Los Angeles Kings became one of the most shocking transactions in sports history"
+        }
+      ]
+    },
+    {
+      "id": "magic-johnson",
+      "name": "Magic Johnson",
+      "aliases": [
+        "Magic"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Basketball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American basketball player who entered the NBA in 1979"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won five NBA championships as a point guard for the Los Angeles Lakers"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Led the \"Showtime\" Lakers and shared a famous rivalry with a Boston Celtics forward"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Announced in 1991 that he had contracted HIV, becoming a prominent advocate for awareness and research"
+        }
+      ]
+    },
+    {
+      "id": "larry-bird",
+      "name": "Larry Bird",
+      "aliases": [
+        "Larry Legend"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Basketball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American basketball player from Indiana who entered the NBA in 1979"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won three NBA championships with the Boston Celtics"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Captured three consecutive NBA MVP awards in the mid-1980s"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Shared a storied rivalry with a Los Angeles Lakers point guard dating back to the 1979 NCAA title game"
+        }
+      ]
+    },
+    {
+      "id": "floyd-mayweather",
+      "name": "Floyd Mayweather",
+      "aliases": [
+        "Money",
+        "Pretty Boy"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Boxing)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American boxer who turned professional in the early 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won world titles in five different weight divisions"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for a defensive fighting style built around speed and precision"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Retired with a perfect 50-0 professional record, surpassing Rocky Marciano's undefeated mark"
+        }
+      ]
+    },
+    {
+      "id": "mike-tyson",
+      "name": "Mike Tyson",
+      "aliases": [
+        "Iron Mike"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Boxing)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American boxer who turned professional in the early 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Became the youngest heavyweight champion in boxing history at age 20"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Unified the WBA, WBC, and IBF heavyweight titles in 1987"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Bit part of an opponent's ear during a notorious 1997 title fight"
+        }
+      ]
+    },
+    {
+      "id": "naomi-osaka",
+      "name": "Naomi Osaka",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Tennis)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Japanese tennis player who turned professional in the mid-2010s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won four Grand Slam singles titles, split between two major tournaments"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Became the first Asian player to hold the WTA's world No. 1 ranking"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Beat Serena Williams in a controversial 2018 US Open final for her first major title"
+        }
+      ]
+    },
+    {
+      "id": "stephen-curry",
+      "name": "Stephen Curry",
+      "aliases": [
+        "Chef Curry"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Basketball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American basketball player who entered the NBA in 2009"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Became the NBA's all-time leader in career three-pointers made"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won four NBA championships with the Golden State Warriors"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Became the first unanimous NBA MVP in league history in 2016"
+        }
+      ]
+    },
+    {
+      "id": "kevin-durant",
+      "name": "Kevin Durant",
+      "aliases": [
+        "KD"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Basketball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American basketball player who entered the NBA in 2007"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won the NBA scoring title four times"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won back-to-back NBA Finals MVP awards with the Golden State Warriors"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won NBA MVP in 2014 while playing for the Oklahoma City Thunder"
+        }
+      ]
+    },
+    {
+      "id": "shohei-ohtani",
+      "name": "Shohei Ohtani",
+      "aliases": [
+        "Shotime"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Baseball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Japanese baseball player who moved to Major League Baseball in 2018"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Regularly plays as both a starting pitcher and a power hitter, a rarity in modern baseball"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Became the first player to win multiple unanimous MVP awards"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Became the first player in MLB history to record 50 home runs and 50 stolen bases in a single season"
+        }
+      ]
+    },
+    {
+      "id": "jackie-robinson",
+      "name": "Jackie Robinson",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Baseball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American baseball player who debuted in Major League Baseball in 1947"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Broke Major League Baseball's color barrier as the first Black player of the modern era"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Named the National League's first-ever Rookie of the Year"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "His uniform number 42 is retired across every team in Major League Baseball"
+        }
+      ]
+    },
+    {
+      "id": "katie-ledecky",
+      "name": "Katie Ledecky",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Swimming)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American swimmer who won her first Olympic gold medal as a teenager in 2012"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Specializes in freestyle distance events, particularly the 800m and 1500m"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Holds multiple long-course world records in freestyle events"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Tied the record for most Olympic gold medals won by a female athlete after the 2024 Paris Games"
+        }
+      ]
+    },
+    {
+      "id": "peyton-manning",
+      "name": "Peyton Manning",
+      "aliases": [
+        "The Sheriff"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Football)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American football quarterback who entered the NFL in 1998"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a record five NFL MVP awards"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a Super Bowl with the Indianapolis Colts before later winning one with a different franchise"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Closed out his career by winning Super Bowl 50 with the Denver Broncos"
+        }
+      ]
+    },
+    {
+      "id": "derek-jeter",
+      "name": "Derek Jeter",
+      "aliases": [
+        "The Captain"
+      ],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Baseball)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American baseball player who spent his entire career with one franchise starting in 1995"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won five World Series titles with the New York Yankees"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Became the first Yankee to reach 3,000 career hits"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Earned a nickname after hitting a walk-off World Series home run just after midnight in November 2001"
+        }
+      ]
+    },
+    {
+      "id": "lewis-hamilton",
+      "name": "Lewis Hamilton",
+      "aliases": [],
+      "category": "Athlete",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Athlete (Formula 1 Racing)"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British Formula One driver who debuted in the sport in 2007"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Became the first Black driver to race full-time in Formula One"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won his first World Championship title in just his second F1 season"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won a record-tying seven Formula One World Championships"
+        }
+      ]
+    },
+    {
+      "id": "donald-trump",
+      "name": "Donald Trump",
+      "aliases": [
+        "The Donald"
+      ],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American businessman and television personality born in Queens, New York City"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Built a career in real estate development before hosting a reality TV show"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won the 2016 presidential election as a political outsider"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served as both the 45th and 47th President of the United States"
+        }
+      ]
+    },
+    {
+      "id": "joe-biden",
+      "name": "Joe Biden",
+      "aliases": [],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American politician born in Scranton, Pennsylvania"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Served for decades as a U.S. Senator from Delaware"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Served two terms as Vice President under a two-term president"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Became the 46th President of the United States in 2021"
+        }
+      ]
+    },
+    {
+      "id": "bill-clinton",
+      "name": "Bill Clinton",
+      "aliases": [],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American politician born in Hope, Arkansas"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Served as Governor of Arkansas before entering national politics"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Presided over a period of strong economic growth and a budget surplus in the 1990s"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served as the 42nd President of the United States, 1993-2001"
+        }
+      ]
+    },
+    {
+      "id": "george-w-bush",
+      "name": "George W. Bush",
+      "aliases": [
+        "Dubya",
+        "W"
+      ],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American politician born in New Haven, Connecticut"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Served as Governor of Texas before becoming president"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Son of a former president who also held the nation's highest office"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served as the 43rd President of the United States, 2001-2009"
+        }
+      ]
+    },
+    {
+      "id": "ronald-reagan",
+      "name": "Ronald Reagan",
+      "aliases": [
+        "The Gipper"
+      ],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American politician and former actor born in Tampico, Illinois"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Worked as a Hollywood film actor before entering politics"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Served two terms as Governor of California"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served as the 40th President of the United States, 1981-1989"
+        }
+      ]
+    },
+    {
+      "id": "john-f-kennedy",
+      "name": "John F. Kennedy",
+      "aliases": [
+        "JFK"
+      ],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American politician born in Brookline, Massachusetts"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Commanded a Navy patrol torpedo boat during World War II"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Became the youngest person ever elected President of the United States"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Assassinated in Dallas, Texas in 1963 while in office"
+        }
+      ]
+    },
+    {
+      "id": "abraham-lincoln",
+      "name": "Abraham Lincoln",
+      "aliases": [
+        "Honest Abe"
+      ],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American politician born in a log cabin in Kentucky"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Worked as a lawyer in Illinois before entering national politics"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Led the nation through the Civil War and issued the Emancipation Proclamation"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served as the 16th President and was assassinated in 1865"
+        }
+      ]
+    },
+    {
+      "id": "george-washington",
+      "name": "George Washington",
+      "aliases": [],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American statesman born in colonial Virginia in the 18th century"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Commanded the Continental Army during the Revolutionary War"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Presided over the convention that drafted the U.S. Constitution"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served as the first President of the United States, 1789-1797"
+        }
+      ]
+    },
+    {
+      "id": "winston-churchill",
+      "name": "Winston Churchill",
+      "aliases": [],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British statesman born at Blenheim Palace in the 19th century"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Led Britain as Prime Minister through most of World War II"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won the Nobel Prize in Literature in 1953"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served two separate terms as Prime Minister of the United Kingdom"
+        }
+      ]
+    },
+    {
+      "id": "margaret-thatcher",
+      "name": "Margaret Thatcher",
+      "aliases": [
+        "The Iron Lady"
+      ],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British politician born in Grantham, England"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Trained as a chemist before pursuing a career in law and politics"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Led her party to three consecutive general election victories"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Became the first female Prime Minister of the United Kingdom, serving 1979-1990"
+        }
+      ]
+    },
+    {
+      "id": "angela-merkel",
+      "name": "Angela Merkel",
+      "aliases": [],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "German politician born in Hamburg who grew up in East Germany"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Trained as a physicist before entering politics after German reunification"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Led her country through a major European debt crisis and migration crisis"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served as the first female Chancellor of Germany, 2005-2021"
+        }
+      ]
+    },
+    {
+      "id": "vladimir-putin",
+      "name": "Vladimir Putin",
+      "aliases": [],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Russian politician born in Leningrad, now Saint Petersburg"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Worked as an intelligence officer for the KGB before entering politics"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Served a term as Prime Minister in between periods as head of state"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Has served as President of Russia since 2012, and previously from 2000 to 2008"
+        }
+      ]
+    },
+    {
+      "id": "nelson-mandela",
+      "name": "Nelson Mandela",
+      "aliases": [
+        "Madiba"
+      ],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "South African leader born in the Eastern Cape region"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Trained as a lawyer and helped found a party's youth league"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Spent 27 years imprisoned for opposing apartheid"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Became the first Black President of South Africa in 1994"
+        }
+      ]
+    },
+    {
+      "id": "hillary-clinton",
+      "name": "Hillary Clinton",
+      "aliases": [],
+      "category": "Politician",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Politician"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American politician and lawyer born in Chicago, Illinois"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Served as First Lady of the United States in the 1990s"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Served as U.S. Secretary of State from 2009 to 2013"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Became the first woman to win a major U.S. party's presidential nomination in 2016"
+        }
+      ]
+    },
+    {
+      "id": "queen-elizabeth-ii",
+      "name": "Queen Elizabeth II",
+      "aliases": [],
+      "category": "Royalty",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Royalty"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British monarch born in London in the 1920s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Trained as a military mechanic and driver during World War II"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Ascended to the throne in 1952 following her father's death"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Became the longest-reigning monarch in British history, reigning until 2022"
+        }
+      ]
+    },
+    {
+      "id": "martin-luther-king-jr",
+      "name": "Martin Luther King Jr.",
+      "aliases": [
+        "MLK"
+      ],
+      "category": "Activist",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Activist"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American clergyman born in Atlanta, Georgia"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Helped lead the Montgomery bus boycott in the 1950s"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Delivered a famous speech at the March on Washington in 1963"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won the Nobel Peace Prize in 1964 and was assassinated in 1968"
+        }
+      ]
+    },
+    {
+      "id": "mahatma-gandhi",
+      "name": "Mahatma Gandhi",
+      "aliases": [
+        "Bapu"
+      ],
+      "category": "Activist",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Activist"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Indian lawyer born in Porbandar in the 19th century"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Trained as a lawyer in London and worked in South Africa"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Championed nonviolent civil disobedience against British colonial rule"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Led India's independence movement and was assassinated in 1948"
+        }
+      ]
+    },
+    {
+      "id": "ellen-degeneres",
+      "name": "Ellen DeGeneres",
+      "aliases": [
+        "Ellen"
+      ],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian and TV host born in Louisiana in the 1950s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Starred in a 1990s network sitcom before becoming a talk-show host"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for opening her show by dancing with the studio audience"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Hosted a top-rated daytime talk show for 19 seasons until 2022"
+        }
+      ]
+    },
+    {
+      "id": "jimmy-fallon",
+      "name": "Jimmy Fallon",
+      "aliases": [],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian and TV host born in the 1970s who got his start in sketch comedy"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Spent six years as a cast member on a late-night sketch comedy show before becoming a host"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for playing games like lip sync battles and charades with celebrity guests"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Took over NBC's flagship late-night show in 2014"
+        }
+      ]
+    },
+    {
+      "id": "jimmy-kimmel",
+      "name": "Jimmy Kimmel",
+      "aliases": [],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian and TV host born in the 1960s who started out in radio"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Co-created and co-hosted a raunchy comedy show about masculinity in the late 1990s"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Hosts a late-night network talk show that has aired since 2003"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Has hosted the Academy Awards ceremony multiple times"
+        }
+      ]
+    },
+    {
+      "id": "stephen-colbert",
+      "name": "Stephen Colbert",
+      "aliases": [],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian and TV host born in South Carolina in the 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Got his start as a correspondent on a satirical news show in the 1990s"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Played an exaggerated conservative pundit character on his own cable news parody show"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Took over as host of a legendary CBS late-night show in 2015"
+        }
+      ]
+    },
+    {
+      "id": "david-letterman",
+      "name": "David Letterman",
+      "aliases": [],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian and TV host born in Indiana in the 1940s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Worked as a local TV weatherman before moving into late-night television"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for a recurring segment counting down a comedic top ten list"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Hosted a CBS late-night show for 22 years after being passed over for a bigger job at NBC"
+        }
+      ]
+    },
+    {
+      "id": "conan-obrien",
+      "name": "Conan O'Brien",
+      "aliases": [
+        "Conan"
+      ],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian and TV host born in Massachusetts in the 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Wrote for a sketch comedy show and an animated sitcom before becoming a host"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for his tall, lanky frame and shock of red hair"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Hosted NBC's flagship late-night show for just seven months before a highly publicized exit"
+        }
+      ]
+    },
+    {
+      "id": "anderson-cooper",
+      "name": "Anderson Cooper",
+      "aliases": [],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American journalist born in New York City in the 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Son of a famous fashion designer and heiress"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Worked as a war correspondent before anchoring a nightly news program"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Anchors a nightly CNN news program that has aired since 2003"
+        }
+      ]
+    },
+    {
+      "id": "ryan-seacrest",
+      "name": "Ryan Seacrest",
+      "aliases": [],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American radio and TV personality born in Georgia in the 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Has hosted red carpet coverage for major awards shows for two decades"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Co-hosts a live New Year's Eve countdown broadcast from Times Square"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Hosted a singing competition show for its original 15-season run"
+        }
+      ]
+    },
+    {
+      "id": "phil-mcgraw",
+      "name": "Phil McGraw",
+      "aliases": [
+        "Dr. Phil"
+      ],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American psychologist and TV host born in Oklahoma in the 1950s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Built a trial-consulting business before appearing regularly on a daytime talk show"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Was mentored and introduced to a national audience by a famous talk-show host in the late 1990s"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Hosts a long-running daytime talk show centered on personal and family issues"
+        }
+      ]
+    },
+    {
+      "id": "howard-stern",
+      "name": "Howard Stern",
+      "aliases": [],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American radio personality born in New York in the 1950s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Built a reputation as a provocative morning radio host early in his career"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Moved his radio show exclusively to satellite radio in 2006"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served as a judge on a TV talent competition for several seasons"
+        }
+      ]
+    },
+    {
+      "id": "trevor-noah",
+      "name": "Trevor Noah",
+      "aliases": [],
+      "category": "Media Personality",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Media Personality"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "South African comedian born in the 1980s during apartheid"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "His parents' relationship was illegal under the laws of the country where he was born"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Wrote a bestselling memoir about his childhood"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Succeeded a long-time host of a satirical nightly news program in 2015"
+        }
+      ]
+    },
+    {
+      "id": "elon-musk",
+      "name": "Elon Musk",
+      "aliases": [],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Entrepreneur born in South Africa in the 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Co-founded an online payments company that was later sold to eBay"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Became CEO of an electric car company in 2008 after joining as an early investor"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Founded a private rocket company aiming to make space travel more affordable"
+        }
+      ]
+    },
+    {
+      "id": "jeff-bezos",
+      "name": "Jeff Bezos",
+      "aliases": [],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Entrepreneur born in New Mexico in the 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Left a Wall Street finance job to start an online bookstore out of his garage"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Founded a private aerospace company in 2000"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Built the online bookstore into the world's largest online retailer"
+        }
+      ]
+    },
+    {
+      "id": "bill-gates",
+      "name": "Bill Gates",
+      "aliases": [],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Entrepreneur born in Washington state in the 1950s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Dropped out of an Ivy League university to pursue a software business"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Co-founded a software company with a childhood friend in the 1970s"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Now devotes much of his time to a global charitable foundation"
+        }
+      ]
+    },
+    {
+      "id": "steve-jobs",
+      "name": "Steve Jobs",
+      "aliases": [],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Entrepreneur born in California in the 1950s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Co-founded a computer company in a family garage"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Was ousted from his own company before returning to lead it years later"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Unveiled a touchscreen smartphone in 2007 that transformed the tech industry"
+        }
+      ]
+    },
+    {
+      "id": "mark-zuckerberg",
+      "name": "Mark Zuckerberg",
+      "aliases": [
+        "Zuck"
+      ],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Entrepreneur born in New York in the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Launched a social networking site from his college dorm room"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Dropped out of Harvard to run the company he started full-time"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Renamed his parent company to reflect a focus on virtual reality"
+        }
+      ]
+    },
+    {
+      "id": "warren-buffett",
+      "name": "Warren Buffett",
+      "aliases": [
+        "Oracle of Omaha"
+      ],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Investor born in Nebraska in the 1930s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for a frugal lifestyle despite enormous wealth"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Took control of a struggling textile company in 1965 and turned it into a giant holding company"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Widely nicknamed after the Midwestern city where he still lives and works"
+        }
+      ]
+    },
+    {
+      "id": "richard-branson",
+      "name": "Richard Branson",
+      "aliases": [],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British entrepreneur born in the 1950s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Left school as a teenager to start a magazine, then a mail-order record business"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Founded an airline in 1984 after being stranded on a canceled flight"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Built a group of companies known for a signature single-word brand name"
+        }
+      ]
+    },
+    {
+      "id": "walt-disney",
+      "name": "Walt Disney",
+      "aliases": [],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American animator and entrepreneur born in Illinois in the early 1900s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Introduced a cartoon mouse character in a 1928 short film with synchronized sound"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Holds the record for the most Academy Awards won by an individual"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Opened a landmark theme park in California in 1955"
+        }
+      ]
+    },
+    {
+      "id": "henry-ford",
+      "name": "Henry Ford",
+      "aliases": [],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American industrialist born in Michigan in the 1860s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Founded an automobile company in 1903 that still bears his name"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Pioneered the moving assembly line for mass production in 1913"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Made an affordable car nicknamed after a letter of the alphabet"
+        }
+      ]
+    },
+    {
+      "id": "sam-altman",
+      "name": "Sam Altman",
+      "aliases": [],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American entrepreneur born in the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Served as president of a prominent startup accelerator"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Co-founded an artificial intelligence research lab"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Leads the company behind a widely used AI chatbot"
+        }
+      ]
+    },
+    {
+      "id": "tim-cook",
+      "name": "Tim Cook",
+      "aliases": [],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American executive born in Alabama in the 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Spent years in operations and supply-chain roles before joining a major tech company"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Joined a company founded by a famous entrepreneur as an operations executive in the late 1990s"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Became CEO of that company in 2011 after its co-founder resigned"
+        }
+      ]
+    },
+    {
+      "id": "sheryl-sandberg",
+      "name": "Sheryl Sandberg",
+      "aliases": [],
+      "category": "Business",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Business"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American executive born in Washington D.C. in the 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Held a senior sales and operations role at a major search engine company before her next job"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Wrote a bestselling book about women and leadership in the workplace"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Served as chief operating officer of a major social media company for over a decade"
+        }
+      ]
+    },
+    {
+      "id": "steven-spielberg",
+      "name": "Steven Spielberg",
+      "aliases": [],
+      "category": "Director",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Director"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American director whose blockbusters helped define Hollywood filmmaking from the 1970s onward"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Directed a 1975 thriller about a great white shark that invented the summer blockbuster"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won Best Director Oscars for a Holocaust drama and a World War II epic"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Directed E.T. the Extra-Terrestrial and co-created the Indiana Jones franchise"
+        }
+      ]
+    },
+    {
+      "id": "martin-scorsese",
+      "name": "Martin Scorsese",
+      "aliases": [],
+      "category": "Director",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Director"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Italian-American director known for gritty New York-set crime dramas since the 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Frequent collaborator with Robert De Niro and later Leonardo DiCaprio across dozens of films"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won a Best Director Oscar for a Boston crime thriller after decades of nominations without one"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Directed Goodfellas, Taxi Driver, and Raging Bull"
+        }
+      ]
+    },
+    {
+      "id": "quentin-tarantino",
+      "name": "Quentin Tarantino",
+      "aliases": [],
+      "category": "Director",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Director"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American director known for nonlinear plots and pop-culture-heavy dialogue since the early 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Debut feature was a heist thriller about a botched jewelry robbery"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won the Palme d'Or at Cannes for a nonlinear crime anthology film"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Directed Pulp Fiction and Kill Bill and has said he'll retire after his tenth feature"
+        }
+      ]
+    },
+    {
+      "id": "james-cameron",
+      "name": "James Cameron",
+      "aliases": [],
+      "category": "Director",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Director"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Canadian director known for effects-driven blockbusters since the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Directed Aliens and both of the first two Terminator films"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for record-breaking, self-written blockbusters that push visual-effects technology forward"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Directed Titanic and Avatar, two of the highest-grossing films ever made"
+        }
+      ]
+    },
+    {
+      "id": "christopher-nolan",
+      "name": "Christopher Nolan",
+      "aliases": [],
+      "category": "Director",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Director"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British-American director known for cerebral, time-bending blockbusters since the early 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Directed a Batman trilogy starring Christian Bale"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Known for the dream-heist film Inception and the space-and-time epic Interstellar"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won a Best Director Oscar for a biopic about the creation of the atomic bomb"
+        }
+      ]
+    },
+    {
+      "id": "alfred-hitchcock",
+      "name": "Alfred Hitchcock",
+      "aliases": [],
+      "category": "Director",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Director"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British-American director dubbed a master of suspense, active from the 1920s through the 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Famous for a brief cameo appearance in nearly every one of his own films"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Directed the notorious shower-scene thriller Psycho"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Never won a competitive Best Director Oscar despite five nominations, including for Vertigo and Rear Window"
+        }
+      ]
+    },
+    {
+      "id": "stanley-kubrick",
+      "name": "Stanley Kubrick",
+      "aliases": [],
+      "category": "Director",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Director"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American-born director known for meticulous, perfectionist filmmaking from the 1950s onward"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for demanding dozens of retakes from actors, including one scene that holds a Guinness World Record"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Directed a Cold War satire about nuclear annihilation, Dr. Strangelove"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Directed 2001: A Space Odyssey, A Clockwork Orange, and The Shining"
+        }
+      ]
+    },
+    {
+      "id": "george-lucas",
+      "name": "George Lucas",
+      "aliases": [],
+      "category": "Director",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Director"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American filmmaker whose 1970s effects company reshaped how blockbusters are made"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Founded a visual-effects house behind decades of blockbuster special effects"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Co-created the Indiana Jones franchise with a fellow famed director"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Created the Star Wars franchise, starting with a 1977 space opera"
+        }
+      ]
+    },
+    {
+      "id": "peter-jackson",
+      "name": "Peter Jackson",
+      "aliases": [],
+      "category": "Director",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Director"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "New Zealand director who began his career making low-budget horror comedies"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Turned a beloved fantasy novel series into an Oscar-winning film trilogy"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Directed a film that swept all eleven Oscars it was nominated for"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Directed The Lord of the Rings and The Hobbit trilogies"
+        }
+      ]
+    },
+    {
+      "id": "tim-burton",
+      "name": "Tim Burton",
+      "aliases": [],
+      "category": "Director",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Director"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American director known for a gothic, whimsical visual style since the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Frequent collaborator with an actor known for eccentric roles, working together on eight films"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Directed a 1989 Batman film starring Michael Keaton"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Directed Edward Scissorhands and Beetlejuice"
+        }
+      ]
+    },
+    {
+      "id": "jim-carrey",
+      "name": "Jim Carrey",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Canadian-American comedic actor who became a movie star through a string of hits in the 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played three roles in a live-action comedy using groundbreaking CGI for its era"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Starred in Ace Ventura: Pet Detective and Dumb and Dumber"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Played a man who discovers his entire life is a TV show in The Truman Show"
+        }
+      ]
+    },
+    {
+      "id": "eddie-murphy",
+      "name": "Eddie Murphy",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian who joined a late-night sketch show at just 19 in 1980"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Credited with helping save that struggling sketch show during his run in the early 1980s"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Starred in Beverly Hills Cop and Coming to America"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Voices the wisecracking donkey in the Shrek franchise"
+        }
+      ]
+    },
+    {
+      "id": "steve-martin",
+      "name": "Steve Martin",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian known for absurdist stand-up and a trademark white suit in the 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won a Grammy for a bluegrass banjo album decades into his entertainment career"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Starred as an oblivious con man raised by sharecroppers in The Jerk"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Has hosted the Academy Awards ceremony multiple times"
+        }
+      ]
+    },
+    {
+      "id": "robin-williams",
+      "name": "Robin Williams",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian known for manic, improvisational energy starting in the late 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played a fast-talking, wish-granting genie in an animated Disney film"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won an Academy Award for Best Supporting Actor playing a therapist in Good Will Hunting"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Starred as a father posing as an elderly housekeeper in Mrs. Doubtfire"
+        }
+      ]
+    },
+    {
+      "id": "adam-sandler",
+      "name": "Adam Sandler",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian who joined a late-night sketch show cast in the early 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Played a hot-tempered hockey player turned golfer in Happy Gilmore"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Starred in The Waterboy and Billy Madison"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Earned widespread critical acclaim for a dramatic turn as a jeweler in Uncut Gems"
+        }
+      ]
+    },
+    {
+      "id": "kevin-hart",
+      "name": "Kevin Hart",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American stand-up comedian and actor who broke through with comedy specials and films in the 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Frequently jokes about his own diminutive height in his stand-up act"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Starred opposite Dwayne Johnson in the Jumanji reboot films"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "His What Now? tour became the highest-grossing stand-up comedy tour ever, including a sold-out NFL stadium show"
+        }
+      ]
+    },
+    {
+      "id": "chris-rock",
+      "name": "Chris Rock",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian who joined a late-night sketch show cast in the early 1990s before a stand-up breakthrough"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Won two Emmys for a widely acclaimed 1996 HBO stand-up special"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Hosted the Academy Awards ceremony more than once"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Narrated a semi-autobiographical sitcom about his own childhood that ran from 2005 to 2009"
+        }
+      ]
+    },
+    {
+      "id": "jerry-seinfeld",
+      "name": "Jerry Seinfeld",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American observational stand-up comedian whose sitcom became a 1990s phenomenon"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Co-created a sitcom famously described as being about nothing"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "His self-titled NBC sitcom ran for nine seasons, ending in 1998"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Created the web series Comedians in Cars Getting Coffee"
+        }
+      ]
+    },
+    {
+      "id": "will-ferrell",
+      "name": "Will Ferrell",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian who joined a late-night sketch show cast in the mid-1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Frequently played a self-absorbed local news anchor character"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Starred as a giant human raised by elves at the North Pole"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Starred as an oblivious NASCAR driver in Talladega Nights"
+        }
+      ]
+    },
+    {
+      "id": "amy-schumer",
+      "name": "Amy Schumer",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American stand-up comedian who broke through with a Comedy Central sketch series in the 2010s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Her sketch series tackled feminism and body image through satire"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Wrote and starred in the 2015 romantic comedy Trainwreck, directed by Judd Apatow"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Won a Primetime Emmy for her self-titled sketch series on Comedy Central"
+        }
+      ]
+    },
+    {
+      "id": "tina-fey",
+      "name": "Tina Fey",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American comedian who joined a late-night sketch show as a writer in the late 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Became the first woman to serve as head writer on that late-night sketch show"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Created and starred in the sitcom 30 Rock"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Wrote the 2004 teen comedy Mean Girls"
+        }
+      ]
+    },
+    {
+      "id": "dave-chappelle",
+      "name": "Dave Chappelle",
+      "aliases": [],
+      "category": "Comedian",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Comedian"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American stand-up comedian known for socially charged sketch comedy in the early 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Starred in a Comedy Central sketch series named after himself"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Walked away from a reported fifty-million-dollar deal to continue that show"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Released a string of acclaimed stand-up specials on Netflix beginning in 2017"
+        }
+      ]
+    },
+    {
+      "id": "jk-rowling",
+      "name": "J.K. Rowling",
+      "aliases": [],
+      "category": "Author",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Author"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British author who rose from a struggling single mother to global fame in the late 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Adopted her pen name's middle initial from her grandmother since she has no middle name"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Also writes crime novels under the pseudonym Robert Galbraith"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Created a boy wizard whose book series has sold more than 600 million copies worldwide"
+        }
+      ]
+    },
+    {
+      "id": "stephen-king",
+      "name": "Stephen King",
+      "aliases": [],
+      "category": "Author",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Author"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American author who became known for horror fiction starting in the 1970s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Many of his novels are set in fictional Maine towns"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Married to fellow novelist Tabitha, who rescued the manuscript of his debut novel from the trash"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Debut novel Carrie, published in 1974, was later adapted into a classic horror film"
+        }
+      ]
+    },
+    {
+      "id": "agatha-christie",
+      "name": "Agatha Christie",
+      "aliases": [],
+      "category": "Author",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Author"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British mystery writer active through much of the early-to-mid 20th century"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Created the detectives Hercule Poirot and Miss Marple"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Vanished for eleven days in 1926, sparking a nationwide search"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Guinness World Records credits her as the best-selling novelist of all time, on the strength of books like And Then There Were None"
+        }
+      ]
+    },
+    {
+      "id": "william-shakespeare",
+      "name": "William Shakespeare",
+      "aliases": [],
+      "category": "Author",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Author"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "English playwright and poet active in the late 16th and early 17th centuries"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Wrote plays performed at London's Globe Theatre"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Credited with coining hundreds of English words and phrases still used today"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Wrote tragedies including Hamlet, Macbeth, and Romeo and Juliet"
+        }
+      ]
+    },
+    {
+      "id": "mark-twain",
+      "name": "Mark Twain",
+      "aliases": [
+        "Samuel Clemens"
+      ],
+      "category": "Author",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Author"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American author and humorist active in the 19th century"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Took his pen name from a Mississippi riverboat term meaning safe water depth"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Grew up along the Mississippi River, which inspired much of his fiction"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Wrote The Adventures of Tom Sawyer and its sequel The Adventures of Huckleberry Finn"
+        }
+      ]
+    },
+    {
+      "id": "ernest-hemingway",
+      "name": "Ernest Hemingway",
+      "aliases": [],
+      "category": "Author",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Author"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American author known for a spare writing style, active in the early-to-mid 20th century"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Part of a circle of American expatriate writers in 1920s Paris"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Won the Nobel Prize in Literature in 1954"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Wrote The Old Man and the Sea and A Farewell to Arms"
+        }
+      ]
+    },
+    {
+      "id": "maya-angelou",
+      "name": "Maya Angelou",
+      "aliases": [],
+      "category": "Author",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Author"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American author and poet prominent during the civil rights era"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Worked alongside both Martin Luther King Jr. and Malcolm X"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Recited an original poem at a presidential inauguration in 1993"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Wrote the autobiography I Know Why the Caged Bird Sings"
+        }
+      ]
+    },
+    {
+      "id": "george-orwell",
+      "name": "George Orwell",
+      "aliases": [
+        "Eric Blair"
+      ],
+      "category": "Author",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Author"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British author and journalist active in the early-to-mid 20th century"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Wrote under a pen name; born Eric Arthur Blair"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Coined terms like Big Brother and doublethink in his fiction"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Wrote the dystopian novel 1984 and the political allegory Animal Farm"
+        }
+      ]
+    },
+    {
+      "id": "jrr-tolkien",
+      "name": "J.R.R. Tolkien",
+      "aliases": [],
+      "category": "Author",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Author"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British author and Oxford professor active in the 20th century"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Belonged to an Oxford literary group called the Inklings, alongside C.S. Lewis"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Created the fictional world of Middle-earth"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Wrote The Hobbit and The Lord of the Rings trilogy"
+        }
+      ]
+    },
+    {
+      "id": "dan-brown",
+      "name": "Dan Brown",
+      "aliases": [],
+      "category": "Author",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Author"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American thriller author who became a global phenomenon in the early 2000s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Novels frequently follow the Harvard symbologist Robert Langdon"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Books often center on hidden codes and religious conspiracy theories"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Wrote The Da Vinci Code, later adapted into a film starring Tom Hanks"
+        }
+      ]
+    },
+    {
+      "id": "gisele-bundchen",
+      "name": "Gisele Bündchen",
+      "aliases": [],
+      "category": "Model",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Model"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Brazilian model who rose to international fame in the late 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Credited with popularizing a distinctive high-stepping runway style known as the horse walk"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Longtime Victoria's Secret Angel and one of the highest-paid models for over a decade"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Was formerly married to NFL quarterback Tom Brady"
+        }
+      ]
+    },
+    {
+      "id": "naomi-campbell",
+      "name": "Naomi Campbell",
+      "aliases": [],
+      "category": "Model",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Model"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British model who rose to fame in the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "One of the fashion industry's original supermodels, part of a famous trio with Linda Evangelista and Christy Turlington"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "In 1988, became the first Black model to appear on the cover of French Vogue"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Longtime face of major fashion houses including Versace and Chanel, still walking runways decades into her career"
+        }
+      ]
+    },
+    {
+      "id": "kate-moss",
+      "name": "Kate Moss",
+      "aliases": [],
+      "category": "Model",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Model"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British model discovered as a teenager in the late 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Discovered at age 14 at JFK Airport by a modeling agency founder"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Associated with the heroin chic aesthetic that defined 1990s fashion"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Fronted a famous series of Calvin Klein campaigns alongside actor Mark Wahlberg"
+        }
+      ]
+    },
+    {
+      "id": "heidi-klum",
+      "name": "Heidi Klum",
+      "aliases": [],
+      "category": "Model",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Model"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "German model who rose to fame in the 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Former Victoria's Secret Angel"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Hosted the reality competition show Project Runway for over a decade"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Longtime judge on America's Got Talent and host of Germany's Next Topmodel"
+        }
+      ]
+    },
+    {
+      "id": "tyra-banks",
+      "name": "Tyra Banks",
+      "aliases": [],
+      "category": "Model",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Model"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American model who rose to fame in the 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Former Victoria's Secret Angel"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "In 1997, became the first Black woman to appear solo on the cover of the Sports Illustrated Swimsuit Issue"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Created and hosted the reality competition show America's Next Top Model"
+        }
+      ]
+    },
+    {
+      "id": "cindy-crawford",
+      "name": "Cindy Crawford",
+      "aliases": [],
+      "category": "Model",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Model"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American model who rose to fame in the 1980s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for a distinctive mole above her lip"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "One of the original supermodels of the late 1980s and 1990s"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Starred in a famous 1992 Super Bowl commercial for Pepsi"
+        }
+      ]
+    },
+    {
+      "id": "gordon-ramsay",
+      "name": "Gordon Ramsay",
+      "aliases": [],
+      "category": "Chef",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Chef"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "British chef known for a fiery television personality"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Trained in classic French cooking before opening his own restaurants"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "His flagship London restaurant has held three Michelin stars for over two decades"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Hosts competitive cooking shows including Hell's Kitchen and MasterChef"
+        }
+      ]
+    },
+    {
+      "id": "bob-ross",
+      "name": "Bob Ross",
+      "aliases": [],
+      "category": "Artist",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Artist"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American painter and television host active in the 1980s and 1990s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Known for a large curly perm and a calm, soothing voice"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Coined the phrase happy little trees while painting on camera"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Hosted the PBS instructional show The Joy of Painting from 1983 to 1994"
+        }
+      ]
+    },
+    {
+      "id": "pablo-picasso",
+      "name": "Pablo Picasso",
+      "aliases": [],
+      "category": "Artist",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Artist"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Spanish artist whose career spanned most of the 20th century"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Went through a somber Blue Period early in his career"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Co-founded the Cubism art movement alongside Georges Braque"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Painted Guernica, a mural depicting the bombing of a Spanish town during the Spanish Civil War"
+        }
+      ]
+    },
+    {
+      "id": "andy-warhol",
+      "name": "Andy Warhol",
+      "aliases": [],
+      "category": "Artist",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Artist"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "American artist who led the Pop Art movement in the 1960s"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Ran a New York studio known as The Factory"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Survived being shot by a disgruntled associate in 1968"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Created the famous silkscreen artwork Campbell's Soup Cans"
+        }
+      ]
+    },
+    {
+      "id": "vincent-van-gogh",
+      "name": "Vincent van Gogh",
+      "aliases": [],
+      "category": "Artist",
+      "clues": [
+        {
+          "level": 1,
+          "type": "category",
+          "text": "Category: Artist"
+        },
+        {
+          "level": 2,
+          "type": "background",
+          "text": "Dutch painter active in the late 19th century"
+        },
+        {
+          "level": 3,
+          "type": "fact",
+          "text": "Famously cut off part of his own ear during a mental health crisis"
+        },
+        {
+          "level": 4,
+          "type": "fact",
+          "text": "Believed to have sold only one painting during his lifetime"
+        },
+        {
+          "level": 5,
+          "type": "fact",
+          "text": "Painted The Starry Night and a series of sunflower still lifes"
+        }
+      ]
+    }
+  ]
+}
