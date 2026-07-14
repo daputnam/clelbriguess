@@ -34,7 +34,14 @@ export default function Home() {
   const [stats, setStats] = useState<Stats | null>(() => loadStats());
 
   useEffect(() => {
-    fetch("/api/puzzle")
+    // Use the player's local calendar date, not the server's UTC date, so the
+    // puzzle rolls over at the player's own midnight (matches Wordle's behavior).
+    const now = new Date();
+    const localDate = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
+      now.getDate()
+    ).padStart(2, "0")}`;
+
+    fetch(`/api/puzzle?date=${localDate}`)
       .then((res) => res.json())
       .then((data: Puzzle) => {
         setPuzzle(data);
