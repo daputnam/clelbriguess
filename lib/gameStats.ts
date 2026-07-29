@@ -72,10 +72,11 @@ export function recordResult(result: GameResult): Stats {
 
 export function buildShareText(result: GameResult, puzzleNumber: number): string {
   const lives = 6;
-  const squares = Array.from({ length: lives }, (_, i) =>
-    i < result.livesLost ? "⬛" : "⬜"
+  const livesRemaining = lives - result.livesLost;
+  const hearts = Array.from({ length: lives }, (_, i) =>
+    i < livesRemaining ? "❤️" : "🖤"
   ).join("");
-  const outcome = result.won ? `${lives - result.livesLost}/${lives}` : "X/6";
+  const outcome = result.won ? `${livesRemaining}/${lives}` : "X/6";
   const clueWord = result.cluesUsed === 1 ? "clue" : "clues";
-  return `Cluebrity #${puzzleNumber} ${outcome}\n${squares}\n💡 ${result.cluesUsed} ${clueWord} used\n${result.firstClueText}`;
+  return `Cluebrity #${puzzleNumber} ${outcome}\n${hearts}\n💡 ${result.cluesUsed} ${clueWord} used\n${result.firstClueText}`;
 }

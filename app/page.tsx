@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import type { Clue } from "@/lib/types";
 import { buildShareText, recordResult, type Stats, loadStats } from "@/lib/gameStats";
 import { XIcon, WhatsAppIcon, FacebookIcon, CopyIcon, ShareGenericIcon } from "@/components/ShareIcons";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 const TOTAL_LIVES = 6;
@@ -211,7 +212,7 @@ export default function Home() {
 
   if (status === "loading" || !puzzle) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-neutral-950 text-neutral-100">
+      <main className="flex min-h-screen items-center justify-center bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100">
         <p>Loading today&apos;s puzzle&hellip;</p>
       </main>
     );
@@ -245,11 +246,14 @@ export default function Home() {
       : revealedPositions;
 
   return (
-    <main className="min-h-screen bg-neutral-950 text-neutral-100 px-4 py-8">
+    <main className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 px-4 py-8">
       <div className="mx-auto max-w-2xl flex flex-col gap-6">
-        <header className="text-center">
+        <header className="relative text-center">
+          <div className="absolute right-0 top-0">
+            <ThemeToggle />
+          </div>
           <h1 className="text-2xl font-bold tracking-tight">Cluebrity</h1>
-          <p className="text-sm text-neutral-400">
+          <p className="text-sm text-neutral-500 dark:text-neutral-400">
             Puzzle #{puzzle.puzzleNumber} &middot; {puzzle.date}
           </p>
         </header>
@@ -270,7 +274,7 @@ export default function Home() {
                 return (
                   <div
                     key={flatIndex}
-                    className="flex h-10 w-8 items-center justify-center border-b-2 border-neutral-500 text-lg font-semibold uppercase"
+                    className="flex h-10 w-8 items-center justify-center border-b-2 border-neutral-400 dark:border-neutral-500 text-lg font-semibold uppercase"
                   >
                     {letter ?? ""}
                   </div>
@@ -290,7 +294,7 @@ export default function Home() {
           {clues.map((clue) => (
             <div
               key={clue.level}
-              className="rounded-lg bg-neutral-900 px-4 py-2 text-sm text-neutral-200"
+              className="rounded-lg bg-neutral-100 dark:bg-neutral-900 px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200"
             >
               {clue.text}
             </div>
@@ -311,8 +315,8 @@ export default function Home() {
                       state === "correct"
                         ? "bg-green-600 text-white"
                         : state === "wrong"
-                        ? "bg-neutral-800 text-neutral-500"
-                        : "bg-neutral-700 hover:bg-neutral-600 text-white"
+                        ? "bg-neutral-200 text-neutral-400 dark:bg-neutral-800 dark:text-neutral-500"
+                        : "bg-neutral-200 hover:bg-neutral-300 text-neutral-900 dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-white"
                     }`}
                   >
                     {letter}
@@ -327,7 +331,7 @@ export default function Home() {
                 value={nameGuess}
                 onChange={(e) => setNameGuess(e.target.value)}
                 placeholder="Guess the full name"
-                className="flex-1 rounded bg-neutral-900 px-3 py-2 text-sm outline-none ring-1 ring-neutral-700 focus:ring-neutral-400"
+                className="flex-1 rounded bg-neutral-100 dark:bg-neutral-900 px-3 py-2 text-sm outline-none ring-1 ring-neutral-300 focus:ring-neutral-500 dark:ring-neutral-700 dark:focus:ring-neutral-400"
               />
               <button
                 type="submit"
@@ -349,7 +353,7 @@ export default function Home() {
                 onClick={shareToX}
                 aria-label="Share on X"
                 title="Share on X"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-800 hover:bg-neutral-700"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700"
               >
                 <XIcon />
               </button>
@@ -357,7 +361,7 @@ export default function Home() {
                 onClick={shareToWhatsApp}
                 aria-label="Share on WhatsApp"
                 title="Share on WhatsApp"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-800 text-green-400 hover:bg-neutral-700"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-200 text-green-600 hover:bg-neutral-300 dark:bg-neutral-800 dark:text-green-400 dark:hover:bg-neutral-700"
               >
                 <WhatsAppIcon />
               </button>
@@ -365,7 +369,7 @@ export default function Home() {
                 onClick={shareToFacebook}
                 aria-label="Share on Facebook"
                 title="Share on Facebook"
-                className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-800 text-blue-400 hover:bg-neutral-700"
+                className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-200 text-blue-600 hover:bg-neutral-300 dark:bg-neutral-800 dark:text-blue-400 dark:hover:bg-neutral-700"
               >
                 <FacebookIcon />
               </button>
@@ -374,7 +378,7 @@ export default function Home() {
                   onClick={shareNative}
                   aria-label="More share options"
                   title="More share options"
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-800 hover:bg-neutral-700"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700"
                 >
                   <ShareGenericIcon />
                 </button>
@@ -383,32 +387,32 @@ export default function Home() {
                 onClick={copyShare}
                 aria-label="Copy result to clipboard"
                 title="Copy result to clipboard"
-                className="flex h-9 items-center gap-1.5 rounded-full bg-neutral-800 px-3 text-sm font-semibold hover:bg-neutral-700"
+                className="flex h-9 items-center gap-1.5 rounded-full bg-neutral-200 px-3 text-sm font-semibold hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700"
               >
                 <CopyIcon />
                 {shareCopied ? "Copied!" : "Copy"}
               </button>
             </div>
             {stats && (
-              <div className="flex gap-6 text-center text-sm text-neutral-400">
+              <div className="flex gap-6 text-center text-sm text-neutral-500 dark:text-neutral-400">
                 <div>
-                  <div className="text-lg font-bold text-neutral-100">{stats.played}</div>
+                  <div className="text-lg font-bold text-neutral-900 dark:text-neutral-100">{stats.played}</div>
                   Played
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-neutral-100">
+                  <div className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
                     {stats.played ? Math.round((stats.wins / stats.played) * 100) : 0}%
                   </div>
                   Win Rate
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-neutral-100">
+                  <div className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
                     {stats.currentStreak}
                   </div>
                   Streak
                 </div>
                 <div>
-                  <div className="text-lg font-bold text-neutral-100">{stats.maxStreak}</div>
+                  <div className="text-lg font-bold text-neutral-900 dark:text-neutral-100">{stats.maxStreak}</div>
                   Max Streak
                 </div>
               </div>
