@@ -397,7 +397,10 @@ export default function Home() {
 
         <div className="flex justify-center gap-1" aria-label="Lives remaining">
           {Array.from({ length: TOTAL_LIVES }, (_, i) => (
-            <span key={i} className="text-xl">
+            <span
+              key={i}
+              className={`text-xl ${i === livesRemaining ? "animate-[shake_0.4s_ease-in-out]" : ""}`}
+            >
               {i < livesRemaining ? "❤️" : "🖤"}
             </span>
           ))}
@@ -411,7 +414,9 @@ export default function Home() {
                 return (
                   <div
                     key={flatIndex}
-                    className="flex h-10 w-8 items-center justify-center border-b-2 border-neutral-400 dark:border-neutral-500 text-lg font-semibold uppercase"
+                    className={`flex h-10 w-8 items-center justify-center border-b-2 border-neutral-400 dark:border-neutral-500 text-lg font-semibold uppercase ${
+                      letter ? "animate-[pop-in_0.35s_ease-out]" : ""
+                    }`}
                   >
                     {letter ?? ""}
                   </div>
@@ -439,9 +444,9 @@ export default function Home() {
                     onClick={() => guessLetter(letter)}
                     className={`h-10 rounded font-semibold text-sm transition-colors ${
                       state === "correct"
-                        ? "bg-green-600 text-white"
+                        ? "bg-green-600 text-white animate-[correct-glow_0.4s_ease-out]"
                         : state === "wrong"
-                        ? "bg-neutral-200 text-neutral-400 dark:bg-neutral-800 dark:text-neutral-500"
+                        ? "bg-neutral-200 text-neutral-400 dark:bg-neutral-800 dark:text-neutral-500 animate-[shake_0.4s_ease-in-out]"
                         : "bg-neutral-200 hover:bg-neutral-300 text-neutral-900 dark:bg-neutral-700 dark:hover:bg-neutral-600 dark:text-white"
                     }`}
                   >
