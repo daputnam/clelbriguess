@@ -427,17 +427,6 @@ export default function Home() {
           </div>
         )}
 
-        <section className="flex flex-col gap-2" aria-label="Clues">
-          {clues.map((clue) => (
-            <div
-              key={clue.level}
-              className="rounded-lg bg-neutral-100 dark:bg-neutral-900 px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200"
-            >
-              {clue.text}
-            </div>
-          ))}
-        </section>
-
         {status === "playing" && (
           <>
             <div className="grid grid-cols-9 gap-1 sm:grid-cols-13">
@@ -479,6 +468,17 @@ export default function Home() {
             </form>
           </>
         )}
+
+        <section className="flex flex-col gap-2" aria-label="Clues">
+          {clues.map((clue) => (
+            <div
+              key={clue.level}
+              className="rounded-lg bg-neutral-100 dark:bg-neutral-900 px-4 py-2 text-sm text-neutral-700 dark:text-neutral-200"
+            >
+              {clue.text}
+            </div>
+          ))}
+        </section>
 
         {(status === "won" || status === "lost") && (
           <div className="flex flex-col items-center gap-3">
