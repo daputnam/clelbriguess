@@ -2,7 +2,17 @@
 
 import { useEffect, useMemo, useState } from "react";
 import type { Clue } from "@/lib/types";
-import { buildShareText, recordResult, type Stats, loadStats } from "@/lib/gameStats";
+import {
+  buildShareText,
+  recordResult,
+  type Stats,
+  loadStats,
+  saveStats,
+  mergeStats,
+  getSyncCode,
+  setSyncCode,
+} from "@/lib/gameStats";
+import { normalizeSyncCode } from "@/lib/syncWords";
 import { XIcon, WhatsAppIcon, FacebookIcon, CopyIcon, ShareGenericIcon } from "@/components/ShareIcons";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -33,6 +43,81 @@ export default function Home() {
   const [pendingLetter, setPendingLetter] = useState<string | null>(null);
   const [shareCopied, setShareCopied] = useState(false);
   const [stats, setStats] = useState<Stats | null>(() => loadStats());
+  const [syncCode, setSyncCodeState] = useState<string | null>(() => getSyncCode());
+  const [syncCodeInput, setSyncCodeInput] = useState("");
+  const [syncBusy, setSyncBusy] = useState(false);
+  const [syncMessage, setSyncMessage] = useState<string | null>(null);
+
+  useEffect(() => {
+    // If this device already has a sync code, pull down whatever's on the
+    // server and merge it with what's stored locally so neither side loses history.
+    const code = getSyncCode();
+    if (!code) return;
+    fetch(`/api/sync?code=${encodeURIComponent(code)}`)
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data: { stats: Stats } | null) => {
+        if (!data) return;
+        const merged = mergeStats(loadStats(), data.stats);
+        saveStats(merged);
+        setStats(merged);
+      })
+      .catch(() => {
+        // Offline or sync temporarily unavailable; keep using local stats.
+      });
+  }, []);
+
+  async function createSyncCode() {
+    if (!stats) return;
+    setSyncBusy(true);
+    setSyncMessage(null);
+    try {
+      const res = await fetch("/api/sync", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ stats }),
+      });
+      if (!res.ok) throw new Error();
+      const data: { code: string } = await res.json();
+      setSyncCode(data.code);
+      setSyncCodeState(data.code);
+      setSyncMessage(`Your sync code is ${data.code} — save it to sync on another device.`);
+    } catch {
+      setSyncMessage("Couldn't create a sync code right now. Try again later.");
+    } finally {
+      setSyncBusy(false);
+    }
+  }
+
+  async function linkSyncCode(e: React.FormEvent) {
+    e.preventDefault();
+    const code = normalizeSyncCode(syncCodeInput);
+    if (!code) {
+      setSyncMessage("That doesn't look like a valid sync code.");
+      return;
+    }
+    setSyncBusy(true);
+    setSyncMessage(null);
+    try {
+      const res = await fetch(`/api/sync?code=${encodeURIComponent(code)}`);
+      if (res.status === 404) {
+        setSyncMessage("No progress found for that code.");
+        return;
+      }
+      if (!res.ok) throw new Error();
+      const data: { stats: Stats } = await res.json();
+      const merged = mergeStats(loadStats(), data.stats);
+      saveStats(merged);
+      setStats(merged);
+      setSyncCode(code);
+      setSyncCodeState(code);
+      setSyncCodeInput("");
+      setSyncMessage("Synced! Your progress is now linked across devices.");
+    } catch {
+      setSyncMessage("Couldn't reach sync right now. Try again later.");
+    } finally {
+      setSyncBusy(false);
+    }
+  }
 
   useEffect(() => {
     // Use the player's local calendar date, not the server's UTC date, so the
@@ -80,6 +165,17 @@ export default function Home() {
       firstClueText: clues[0]?.text ?? "",
     });
     setStats(updatedStats);
+
+    const code = getSyncCode();
+    if (code) {
+      fetch("/api/sync", {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ code, stats: updatedStats }),
+      }).catch(() => {
+        // Offline or sync temporarily unavailable; local stats already saved.
+      });
+    }
   }
 
   async function unlockNextClue(newWrongGuesses: number) {
@@ -417,6 +513,47 @@ export default function Home() {
                 </div>
               </div>
             )}
+
+            <div className="w-full max-w-xs text-center text-xs text-neutral-500 dark:text-neutral-400">
+              {syncCode ? (
+                <p>
+                  Synced with code{" "}
+                  <span className="font-mono font-semibold text-neutral-700 dark:text-neutral-300">
+                    {syncCode}
+                  </span>
+                </p>
+              ) : (
+                <>
+                  <p className="mb-2">Want to save your progress or sync across devices?</p>
+                  <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-center">
+                    <button
+                      onClick={createSyncCode}
+                      disabled={syncBusy}
+                      className="rounded-full bg-neutral-200 px-3 py-1.5 font-semibold text-neutral-900 hover:bg-neutral-300 disabled:opacity-50 dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700"
+                    >
+                      Get a sync code
+                    </button>
+                    <form onSubmit={linkSyncCode} className="flex gap-1">
+                      <input
+                        type="text"
+                        value={syncCodeInput}
+                        onChange={(e) => setSyncCodeInput(e.target.value)}
+                        placeholder="Enter a code"
+                        className="w-32 rounded bg-neutral-100 px-2 py-1.5 text-xs outline-none ring-1 ring-neutral-300 focus:ring-neutral-500 dark:bg-neutral-900 dark:ring-neutral-700 dark:focus:ring-neutral-400"
+                      />
+                      <button
+                        type="submit"
+                        disabled={syncBusy}
+                        className="rounded bg-neutral-200 px-2 py-1.5 font-semibold hover:bg-neutral-300 disabled:opacity-50 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+                      >
+                        Link
+                      </button>
+                    </form>
+                  </div>
+                </>
+              )}
+              {syncMessage && <p className="mt-2">{syncMessage}</p>}
+            </div>
           </div>
         )}
       </div>
