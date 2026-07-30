@@ -354,6 +354,47 @@ export default function Home() {
           </p>
         </header>
 
+        <div className="mx-auto w-full max-w-xs text-center text-xs text-neutral-500 dark:text-neutral-400">
+          {syncCode ? (
+            <p>
+              Synced with code{" "}
+              <span className="font-mono font-semibold text-neutral-700 dark:text-neutral-300">
+                {syncCode}
+              </span>
+            </p>
+          ) : (
+            <>
+              <p className="mb-2">Want to save your progress or sync across devices?</p>
+              <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-center">
+                <button
+                  onClick={createSyncCode}
+                  disabled={syncBusy}
+                  className="rounded-full bg-neutral-200 px-3 py-1.5 font-semibold text-neutral-900 hover:bg-neutral-300 disabled:opacity-50 dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700"
+                >
+                  Get a sync code
+                </button>
+                <form onSubmit={linkSyncCode} className="flex gap-1">
+                  <input
+                    type="text"
+                    value={syncCodeInput}
+                    onChange={(e) => setSyncCodeInput(e.target.value)}
+                    placeholder="Enter a code"
+                    className="w-32 rounded bg-neutral-100 px-2 py-1.5 text-xs outline-none ring-1 ring-neutral-300 focus:ring-neutral-500 dark:bg-neutral-900 dark:ring-neutral-700 dark:focus:ring-neutral-400"
+                  />
+                  <button
+                    type="submit"
+                    disabled={syncBusy}
+                    className="rounded bg-neutral-200 px-2 py-1.5 font-semibold hover:bg-neutral-300 disabled:opacity-50 dark:bg-neutral-800 dark:hover:bg-neutral-700"
+                  >
+                    Link
+                  </button>
+                </form>
+              </div>
+            </>
+          )}
+          {syncMessage && <p className="mt-2">{syncMessage}</p>}
+        </div>
+
         <div className="flex justify-center gap-1" aria-label="Lives remaining">
           {Array.from({ length: TOTAL_LIVES }, (_, i) => (
             <span key={i} className="text-xl">
@@ -513,47 +554,6 @@ export default function Home() {
                 </div>
               </div>
             )}
-
-            <div className="w-full max-w-xs text-center text-xs text-neutral-500 dark:text-neutral-400">
-              {syncCode ? (
-                <p>
-                  Synced with code{" "}
-                  <span className="font-mono font-semibold text-neutral-700 dark:text-neutral-300">
-                    {syncCode}
-                  </span>
-                </p>
-              ) : (
-                <>
-                  <p className="mb-2">Want to save your progress or sync across devices?</p>
-                  <div className="flex flex-col items-center gap-2 sm:flex-row sm:justify-center">
-                    <button
-                      onClick={createSyncCode}
-                      disabled={syncBusy}
-                      className="rounded-full bg-neutral-200 px-3 py-1.5 font-semibold text-neutral-900 hover:bg-neutral-300 disabled:opacity-50 dark:bg-neutral-800 dark:text-neutral-100 dark:hover:bg-neutral-700"
-                    >
-                      Get a sync code
-                    </button>
-                    <form onSubmit={linkSyncCode} className="flex gap-1">
-                      <input
-                        type="text"
-                        value={syncCodeInput}
-                        onChange={(e) => setSyncCodeInput(e.target.value)}
-                        placeholder="Enter a code"
-                        className="w-32 rounded bg-neutral-100 px-2 py-1.5 text-xs outline-none ring-1 ring-neutral-300 focus:ring-neutral-500 dark:bg-neutral-900 dark:ring-neutral-700 dark:focus:ring-neutral-400"
-                      />
-                      <button
-                        type="submit"
-                        disabled={syncBusy}
-                        className="rounded bg-neutral-200 px-2 py-1.5 font-semibold hover:bg-neutral-300 disabled:opacity-50 dark:bg-neutral-800 dark:hover:bg-neutral-700"
-                      >
-                        Link
-                      </button>
-                    </form>
-                  </div>
-                </>
-              )}
-              {syncMessage && <p className="mt-2">{syncMessage}</p>}
-            </div>
           </div>
         )}
       </div>
