@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { Clue } from "@/lib/types";
 import {
   buildShareText,
@@ -47,6 +47,17 @@ export default function Home() {
   const [syncCodeInput, setSyncCodeInput] = useState("");
   const [syncBusy, setSyncBusy] = useState(false);
   const [syncMessage, setSyncMessage] = useState<string | null>(null);
+  const [flash, setFlash] = useState<{ type: "correct" | "wrong"; id: number } | null>(null);
+  const flashId = useRef(0);
+
+  function triggerFlash(type: "correct" | "wrong") {
+    flashId.current += 1;
+    const id = flashId.current;
+    setFlash({ type, id });
+    window.setTimeout(() => {
+      setFlash((current) => (current?.id === id ? null : current));
+    }, 750);
+  }
 
   useEffect(() => {
     // If this device already has a sync code, pull down whatever's on the
@@ -203,6 +214,7 @@ export default function Home() {
       const data = await res.json();
 
       if (data.correct) {
+        triggerFlash("correct");
         setLetterStates((prev) => ({ ...prev, [letter]: "correct" }));
         setRevealedPositions((prev) => {
           const next = { ...prev };
@@ -215,6 +227,7 @@ export default function Home() {
           return next;
         });
       } else {
+        triggerFlash("wrong");
         setLetterStates((prev) => ({ ...prev, [letter]: "wrong" }));
         const newWrongGuesses = wrongGuesses + 1;
         setWrongGuesses(newWrongGuesses);
@@ -241,8 +254,10 @@ export default function Home() {
     const data = await res.json();
 
     if (data.correct) {
+      triggerFlash("correct");
       finishGame(true, wrongGuesses, data.name);
     } else {
+      triggerFlash("wrong");
       const newWrongGuesses = wrongGuesses + 1;
       setWrongGuesses(newWrongGuesses);
       setNameGuess("");
@@ -343,6 +358,17 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100 px-4 py-8">
+      {flash && (
+        <div
+          key={flash.id}
+          aria-hidden="true"
+          className={`pointer-events-none fixed inset-0 z-50 ${
+            flash.type === "correct"
+              ? "animate-[flash-fade_0.7s_ease-out_forwards] bg-[radial-gradient(circle_at_center,rgba(34,197,94,0.55),rgba(34,197,94,0)_70%)]"
+              : "animate-[flash-fade_0.6s_ease-out_forwards] bg-[radial-gradient(circle_at_center,rgba(239,68,68,0.55),rgba(239,68,68,0)_70%)]"
+          }`}
+        />
+      )}
       <div className="mx-auto max-w-2xl flex flex-col gap-6">
         <header className="relative text-center">
           <div className="absolute right-0 top-0">
